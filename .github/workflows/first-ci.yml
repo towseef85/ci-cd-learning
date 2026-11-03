@@ -14,5 +14,8 @@ jobs:
       - name: Say Hello
         run: echo "Hello! My first CI pipeline is running!"
 
-      - name: Show a second message
-        run: echo "GitHub Actions is working!"
+      - name: Simulate an error
+        run: exit 1
+
+      - name: Final Message
+        run: echo "Pipeline completed successfully"
