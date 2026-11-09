@@ -1,0 +1,21 @@
+
+# .NET generated build files
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# VS Code local settings
+.vscode/
+
+# Test results
+TestResults/
+**/TestResults/
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
