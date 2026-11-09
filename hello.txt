@@ -1,0 +1,2 @@
+Hello from my GitHub repository!
+I am learning CI/CD.
