@@ -17,4 +17,20 @@ public class UnitTest1
         // Assert
         Assert.Equal(8, result);
     }
+
+
+[Fact]
+public void Multiply_TwoNumbers_ReturnsCorrectProduct()
+{
+    // Arrange
+    int a = 5;
+    int b = 3;
+
+    // Act
+    int result = Calculator.Multiply(a, b);
+
+    // Assert
+    Assert.Equal(15, result);
+}
+
 }
