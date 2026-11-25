@@ -30,3 +30,16 @@ jobs:
 
       - name: Run Unit Tests
         run: dotnet test CICDDemo.Tests/CICDDemo.Tests.csproj --no-build --configuration Release
+
+      # NEW: Prepare application for deployment
+      - name: Publish Application
+        run: dotnet publish CICDDemoProject/CICDDemo.csproj --configuration Release --output ./publish
+
+      # NEW: Store the published application
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cicd-demo-app
+          path: ./publish/
+          if-no-files-found: error
+          retention-days: 7
